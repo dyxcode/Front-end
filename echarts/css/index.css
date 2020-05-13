@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  background: url(../images/bg.jpg) no-repeat top center;
+  line-height: 1.15;
+}
+/* 数码字体 */
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-DIGIT.TTF);
+}
+header {
+  height: 1.25rem;
+  background: url(../images/head_bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+header h1 {
+  color: #fff;
+  font-size: .475rem;
+  text-align: center;
+  line-height: 1rem;
+}
+/* 主题布局 */
+.mainbox {
+  display: flex;
+  min-width: 12.8rem;
+  max-width: 24rem;
+  margin: 0 auto;
+  padding: .125rem .125rem 0;
+}
+.mainbox .column {
+  flex: 3;
+}
+.column:nth-child(2) {
+  flex: 5;
+  margin: 0 .125rem .1875rem;
+  overflow: hidden;
+}
+/* panel的布局 */
+.mainbox .panel {
+  position: relative;
+  height: 3.875rem;
+  border: solid .0125rem rgba(25, 186, 139, 0.17);
+  padding: 0 .1875rem .5rem;
+  margin-bottom: .1875rem;
+  background: url(../images/line.png) rgba(255, 255, 255, 0.03);
+}
+/* 四个角 */
+.mainbox .panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: .125rem;
+  height: .125rem;
+  border-left: .025rem solid #02a6b5;
+  border-top: .025rem solid #02a6b5;
+}
+.mainbox .panel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: .125rem;
+  height: .125rem;
+  border-right: .025rem solid #02a6b5;
+  border-top: .025rem solid #02a6b5;
+}
+.mainbox .panel .panel-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.mainbox .panel .panel-footer::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: .125rem;
+  height: .125rem;
+  border-left: .025rem solid #02a6b5;
+  border-bottom: .025rem solid #02a6b5;
+}
+.mainbox .panel .panel-footer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: .125rem;
+  height: .125rem;
+  border-right: .025rem solid #02a6b5;
+  border-bottom: .025rem solid #02a6b5;
+}
+/* panel 内部布局 */
+.panel h2 {
+  height: .6rem;
+  color: #fff;
+  line-height: .6rem;
+  text-align: center;
+  font-size: .25rem;
+  font-weight: 400;
+}
+.panel .chart {
+  height: 3rem;
+}
+/* 中间的布局 */
+.no {
+  background: rgba(101, 132, 226, 0.1);
+  padding: .1875rem;
+}
+.no .no-hd {
+  position: relative;
+  border: .0125rem solid rgba(25, 186, 139, 0.17);
+}
+.no ul {
+  display: flex;
+}
+.no .no-hd ul li{
+  position: relative;
+  flex: 1;
+  line-height: 1rem;
+  font-size: .875rem;
+  color: #ffeb7b;
+  text-align: center;
+  font-family: "electronicFont";
+}
+/* 两个li中间的竖线 */
+.no-hd li:first-child::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  right: 0;
+  height: 50%;
+  width: .0125rem;
+  background: rgba(255, 255, 255, 0.2);
+}
+/* 中间数字的两个角 */
+.no .no-hd::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: .375rem;
+  height: .125rem;
+  border-top: .025rem solid #02a6b5;
+  border-left: .025rem solid #02a6b5;
+  content: "";
+}
+.no .no-hd::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: .375rem;
+  height: .125rem;
+  border-bottom: .025rem solid #02a6b5;
+  border-right: .025rem solid #02a6b5;
+  content: "";
+}
+
+.no .no-bd li{
+  flex: 1;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: .225rem;
+  height: .5rem;
+  line-height: .5rem;
+  padding-top: .125rem;
+}
+/* 地图布局 */
+.map {
+  position: relative;
+  height: 10.125rem;
+}
+.map .map-ball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6.475rem;
+  height: 6.475rem;
+  background: url(../images/map.png);
+  background-size: 100% 100%;
+  opacity: 0.3;
+}
+.map .map-rotate1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8.0375rem;
+  height: 8.0375rem;
+  background: url(../images/lbx.png);
+  background-size: 100% 100%;
+  opacity: 0.6;
+  animation: rotate1 15s linear infinite;
+}
+.map .map-rotate2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.075rem;
+  height: 7.075rem;
+  background: url(../images/jt.png);
+  background-size: 100% 100%;
+  opacity: 0.6;
+  animation: rotate2 10s linear infinite;
+}
+.map .chart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10.125rem;
+}
+/* 旋转动画 */
+@keyframes rotate1 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes rotate2 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+/* 约束屏幕尺寸 */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 80px !important;
+  }
+}
