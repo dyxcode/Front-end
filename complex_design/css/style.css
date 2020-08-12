@@ -52,7 +52,6 @@ p {font-size: 1.2vw;}
 	position: relative;
 	width: 8vw;
 	height: 4vh;
-	background-color: #101f30;
 	margin: 3vh 0 0 35vw;
 	border-radius: 5vw;
 	box-shadow: 0 0 1vw #cccccc inset;
@@ -109,12 +108,9 @@ p {font-size: 1.2vw;}
 	display: inline;
 	background-color: white;
 	margin-left: 1vw;
-	height: 5vh;
 }
 .toolbar .svg2 {
 	display: inline;
-	width: 3vw;
-	height: 3vh;
 	vertical-align: text-top;
 }
 .toolbar ul {
