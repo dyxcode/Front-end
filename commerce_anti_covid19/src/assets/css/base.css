@@ -1,0 +1,27 @@
+/* base css */
+@import "./normalize.css";
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  /* 禁止用户鼠标在页面上选中文字、图片等 */
+  user-select: none; 
+  -webkit-tap-highlight-color: transparent;
+  color: #666;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+ul {
+  list-style: none;
+}
